@@ -1,12 +1,12 @@
 #!/bin/bash
 
-thread="$@."
-
+maxcount=$1
+thread="${*:2}."
+count=$maxcount
 IFS='|'
-count=1
 echo -n $thread | while read -n 1 i
 do
-if [ $count -eq 4 ]; then
+if [ $count -eq $maxcount ]; then
     echo "$i "
     count=1
   else
