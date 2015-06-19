@@ -2,7 +2,7 @@
 
 maxcount=$1
 thread="${*:2}."
-count=$maxcount
+count=1
 IFS='|'
 echo -n $thread | while read -n 1 i
 do
